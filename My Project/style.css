@@ -1,0 +1,150 @@
+body {
+     
+        font-family: Prompt;
+        font-weight: 600;
+        background: linear-gradient(to right, #6a11cb, #2575fc);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    
+    body::before,
+    body::after{
+        content: '';
+        position: absolute;
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        background-size: 500%;
+        width: calc(100%);
+        height: calc(100%);
+        z-index: -1;
+        animation: glow 50s linear infinite;
+        
+    }
+    body::after{
+    filter: blur(30px);
+    }
+    @keyframes glow {
+        0% {
+            background-position: 0 0;
+        }
+        50% {
+            background-position: 500% 0;
+        }
+        100% {
+            background-position: 0 0;
+        }
+    }
+
+    .form-container {
+        background: black;
+        color: white;
+        padding: 180px 410px;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px;
+    }
+
+
+/* За текста в бутона */
+.registerForm span,
+.subscription span,
+.drivingPermission span {
+    font-family: "Spartan";
+    position: absolute;
+    font-size: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+.registerForm,
+.subscription,
+.drivingPermission {
+    position: absolute;
+    margin: 0 auto 0;
+    width: 270px;
+    height: 90px;
+    background: linear-gradient(0deg, #1d1e22, #42444d);
+    border-radius: 100px;
+}
+
+.registerForm:before,
+.registerForm:after,
+.subscription:before,
+.subscription:after,
+.drivingPermission:before,
+.drivingPermission:after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: glow 50s linear infinite;
+    border-radius: 100px;
+}
+
+.registerForm:after,
+.subscription:after,
+.drivingPermission:after {
+    filter: blur(30px);
+}
+
+@keyframes glow {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 500% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* Позициониране на формите */
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+
+/* Позициониране на формите */
+.registerForm {
+    top: 435px;
+    left: 130px;
+}
+
+.subscription {
+    top: 435px;
+    left: 50%;
+    margin-left: -130px;
+}
+
+.drivingPermission {
+    top: 435px;
+    right: 130px;
+}
+
+.form-container h1, .form-container p {
+    
+    margin-left: 50px;  
+}
+
+.form-container p {
+    margin-top: 0px;
+    margin-bottom: 170px;
+    text-align: center;
+    margin-left:0px;
+    margin-right: 10px;
+}
