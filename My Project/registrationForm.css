@@ -1,0 +1,134 @@
+ body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+body::before,
+body::after{
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background-size: 500%;
+    width: calc(100%);
+    height: calc(100%);
+    z-index: -1;
+    animation: glow 50s linear infinite;
+    
+}
+body::after{
+filter: blur(30px);
+}
+@keyframes glow {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 500% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
+.form-container {
+    background: white;
+    padding: 10px 340px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+ 
+h1 {
+    margin-bottom: 20px;
+    top: 100 px;
+    font-size: 24px;
+    color: #333;
+    background: #000;
+    color: white;
+    padding: 10px 0;
+    border-radius: 10px 10px 0 0;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #333;
+    display: block;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.name-group, .phone-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input[type="text"] {
+    flex: 1;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: space-around;
+}
+
+.radio-group label {
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #219c6d;;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #12553bcb;;
+}
+
+#message {
+    margin-top: 15px;
+    color: #d32f2f;
+    font-weight: bold;
+} 
+
+.group-elements{
+    display: flex;
+}
